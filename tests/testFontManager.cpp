@@ -23,5 +23,8 @@ TEST_CASE("FontSingleton loads fonts and retrieves them") {
     // Check for a font that is unavailable
     CHECK(FontSingleton::getInstance().getFont("fakeFont") == nullptr);
 
+    // Sanity test
+    // CHECK(FontSingleton::getInstance().getFont("notoSansBold") == nullptr);
+
     ImGui::DestroyContext();
 }

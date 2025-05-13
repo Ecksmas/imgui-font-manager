@@ -30,4 +30,8 @@ ImGui::PopFont();
 
 ## Testing
 
-Doctest is used to create
+Doctest is used in the testing of the project, some simple test to check that everything is running correctly.
+
+To run tests:
+- cd build
+- ./runTests
