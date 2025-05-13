@@ -15,8 +15,8 @@ void FontSingleton::initFonts()
     ImVector<ImWchar> customRanges;
     ImFontGlyphRangesBuilder builder;
 
-    builder.BuildRanges(&customRanges);
     builder.AddRanges(io.Fonts->GetGlyphRangesDefault());
+    builder.BuildRanges(&customRanges);
 
     // Primary font
     ImFont *notoSansNormal = io.Fonts->AddFontFromFileTTF(

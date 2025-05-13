@@ -20,12 +20,27 @@ set(IMGUI_BACKENDS
 
 add_executable(${PROJECT_NAME}
     src/fontManager.cpp
+    examples/examplesFontManager.cpp
     ${IMGUI_SRC}
     ${IMGUI_BACKENDS}
 )
 
 target_include_directories(${PROJECT_NAME} PRIVATE
     ${CMAKE_SOURCE_DIR}/include
+    ${CMAKE_SOURCE_DIR}/third_party/imgui
+    ${CMAKE_SOURCE_DIR}/third_party/imgui/backends
+)
+
+# Test setup
+add_executable(runTests
+    tests/testFontManager.cpp
+    src/fontManager.cpp
+    ${IMGUI_SRC}
+)
+
+target_include_directories(runTests PRIVATE
+    ${CMAKE_SOURCE_DIR}/include
+    ${CMAKE_SOURCE_DIR}/third_party/doctest
     ${CMAKE_SOURCE_DIR}/third_party/imgui
 )
 
