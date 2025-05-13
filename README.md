@@ -13,6 +13,14 @@ The project includes:
 - An interactive demo that lets the user switch between two fonts.
 - A clean setup using modern C++17 and CMake.
 
+## Testing
+
+Doctest is used in the testing of the project, some simple test to check that everything is running correctly.
+
+To run tests:
+- cd build
+- ./runTests
+
 ## Purpose
 
 The purpose of creating this code was to create something that can be used when creating ImGui projects that heavly use different styling on their text. Additionally, it was created to demostrate and improve my knowledge of singleton patterns and testing.
@@ -27,11 +35,3 @@ A singleton class that:
 ImGui::PushFont(FontSingleton::getInstance().getFont(currentFont));
 ImGui::Text("Your text!");
 ImGui::PopFont();
-
-## Testing
-
-Doctest is used in the testing of the project, some simple test to check that everything is running correctly.
-
-To run tests:
-- cd build
-- ./runTests
